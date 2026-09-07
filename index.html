@@ -10,39 +10,152 @@
     <header>
         <div class="logo">
             <img src="" alt="">
-            <h4>logo</h4>
+            <h4>CTA</h4>
         </div>
 
-        <div class="search">
-            <input type="text" name="" id="">
-            <button>Search</button>
-        </div>
+    <form class="search-bar">
+        <ion-icon name="search"></ion-icon>
+        <input type="text" name="location" id="location" placeholder="Where would you like to go?" autocomplete="off">
+        <button class="btn">Search</button>
+    </form>
 
         <button id="sidenavBtn">X</button>
     </header>
 
-    <!-- <div class="slideshow" id="homePageSlideshow">
-        <button class="slideshowBtn"><</button>
-        <img src="./images/seascape 1.webp" alt="">
-        <button>></button>
-    </div> -->
+    <section class="slideshow-container">
+
+        <div class="homeSlide">
+            <h2 class="slide-location">The Sea</h2>
+            <img src="./images/seascape 1.webp" alt="A seascape">
+        </div>
+
+        <div class="homeSlide">
+            <h2 class="slide-location">2</h2>
+            <img src="./images/seascape 2.webp" alt="A seascape">
+        </div>
+
+        <div class="homeSlide">
+            <h2 class="slide-location">3</h2>
+            <img src="./images/seascape 3.webp" alt="A seascape">
+        </div>
+
+        <div class="homeSlide">
+            <h2 class="slide-location">4</h2>
+            <img src="./images/seascape 4.jpeg" alt="A seascape">
+        </div>
+
+
+        <div class="dots-wrapper">
+        <div class="dot dot-active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        </div>
+
+
+
+  </section>
+
+  <section>
+    <div class="tabbar">
+        <button class="btn tabbtn" data-tabid="Food">Food</button>
+        <button class="btn tabbtn btn-active" data-tabid="Visit">Visit</button>
+        <button class="btn tabbtn" data-tabid="Stay">Stay</button>
+    </div>
+  </section>
 
     <div class="location-container">
         <h4>Top Location</h4>
 
         <div class="location-wrapper">
 
-            <div class="location-card">
-                <img src="./images/seascape 2.webp" alt="">
-                <h4>location</h4>
+            <div class="location">
+                <div  class="location-thumbnail">
+                <img src="./images/seascape 4.jpeg" alt="">
+                <a href="#" class="link category">Beautiful</a>
+                </div>
 
+                <div class="location-detail">
+                <div class="rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                </div>
+                <h4 class="location-name">Seaside</h4>
+                <button class="btn detail-btn">Show Details</button>
+
+                </div>
             </div>
+            
 
 
         </div>
 
 
     </div>
+
+    <div class="modal-wrapper">
+        <!--
+        <div class="modal-container">
+      <div class="modal-overlay">
+        <div class="modal-head">
+          <h4>Recipe Name</h4>
+
+          <a href="#" class="link" id="closeBtn">
+            <ion-icon name="close-circle"></ion-icon>
+          </a>
+        </div>
+
+        <div class="modal-body">
+          <div class="tabbar">
+            <button class="btn tabbtn btn-active" data-tabid="description">Description</button>
+            <button class="btn tabbtn" data-tabid="ingredient">Ingredients</button>
+            <button class="btn tabbtn" data-tabid="direction">Directions</button>
+          </div>
+
+          <div class="tabbar-body">
+            <section class="tab tab-active" id="description">
+              <h3>Description</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nostrum voluptate optio voluptatum numquam facilis eum autem eveniet expedita obcaecati perspiciatis officiis, ducimus, doloribus modi quod hic esse soluta. In.</p>
+            </section>
+
+            <section class="tab" id="ingredient">
+              <h3>Ingredients</h3>
+              <ul>
+                <li>500g desiccated coconut</li>
+                <li>200g plain flour</li>
+                <li>1 egg, beaten</li>
+                <li>50ml vegetable oil</li>
+                <li>70g mayonnaise</li>
+                <li>30g sweet chilli sauce</li>
+              </ul>
+            </section>
+
+
+            <section class="tab" id="direction">
+              <h3>Directions</h3>
+              <div class="step">
+                <h4>Step 1</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, sunt!</p>
+              </div>
+              <div class="step">
+                <h4>Step 2</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, sunt!</p>
+              </div>
+              <div class="step">
+                <h4>Step 3</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, sunt!</p>
+              </div>
+            </section>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    </div>
+    -->
 
 
 
