@@ -1,0 +1,41 @@
+Top Bar
+    logo
+    hamburger button
+        home
+        profile
+        saved locations
+        about us
+    search bar
+
+tabs
+    food & drinks
+        restaurants
+    visit
+    stay
+
+slideshow
+    based on tab
+
+divs:
+    most popular
+    tags
+
+
+
+
+div for location
+    picture
+    location
+    name
+    prices
+    stuff nearby(last)
+    tags
+
+    description button: more in depth
+        ratings
+        prices 
+        description
+        location
+        reviews maybe
+        stuff nearby
+
