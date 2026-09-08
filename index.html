@@ -8,18 +8,20 @@
 </head>
 <body>
     <header>
+      <div class="flex">
         <div class="logo">
             <img src="" alt="">
             <h4>CTA</h4>
         </div>
+      </div>
+    <div class="flex">
+      <form class="search-bar">
+          <input class="search-input" type="text" name="location" id="location" placeholder="Where would you like to go?" autocomplete="off">
+          <button class="btn">Search</button>
+      </form>
 
-    <form class="search-bar">
-        <ion-icon name="search"></ion-icon>
-        <input type="text" name="location" id="location" placeholder="Where would you like to go?" autocomplete="off">
-        <button class="btn">Search</button>
-    </form>
-
-        <button id="sidenavBtn">X</button>
+      <button id="sidenavBtn">X</button>
+    </div>
     </header>
 
     <section class="slideshow-container">
@@ -72,7 +74,7 @@
             <div class="location">
                 <div  class="location-thumbnail">
                 <img src="./images/seascape 4.jpeg" alt="">
-                <a href="#" class="link category">Beautiful</a>
+                <a href="#" class="link category">category</a>
                 </div>
 
                 <div class="location-detail">
