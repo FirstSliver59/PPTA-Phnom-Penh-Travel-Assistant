@@ -97,14 +97,16 @@ img {
   object-fit: cover;
 }
 
-.slideshow {
-    display: flex
+ion-icon {
+  color: var(--elm-txt);
+  font-size: 32px;
+  cursor: pointer;
 }
 
 .search-bar {
   height: fit-content;
   display: flex;
-  align-items: right;
+  align-items: center;
   justify-content: space-between;
   min-width: 400px;
 
@@ -113,8 +115,20 @@ img {
   border-radius: 15px;
 }
 
+.search-bar ion-icon {
+  color: var(--outline);
+}
+
 .search-input {
   min-width: 250px;
+}
+
+.tabbar-header {
+  padding: 25px;
+  text-align: center;
+
+  background-color: var(--bg);
+  color: var(--txt)
 }
 
 /*Buttons*/
@@ -135,12 +149,6 @@ img {
   font-size: 16px;
   font-weight: 700;
   border-radius: 7.5px;
-}
-
-ion-icon {
-  color: var(--elm-txt);
-  font-size: 32px;
-  cursor: pointer;
 }
 
 /*Slideshow*/

@@ -18,12 +18,13 @@
       </div>
     <div class="flex">
       <form class="search-bar">
+          <ion-icon name="search"></ion-icon>
           <input class="search-input" type="text" name="location" id="location" placeholder="Where would you like to go?" autocomplete="off">
           <button class="btn">Search</button>
       </form>
 
       <button id="sidenavBtn">
-        <img class="hamburger" src="./images/hamburger-icon.png" alt="">
+        <ion-icon class="hamburger" name="menu"></ion-icon>
       </button>
     </div>
     </header>
@@ -57,21 +58,21 @@
         <div class="dot"></div>
         <div class="dot"></div>
         </div>
-
-
-
-  </section>
-
-  <section>
-    <div class="tabbar">
-        <button class="btn tabbtn" data-tabid="Food">Food</button>
-        <button class="btn tabbtn btn-active" data-tabid="Visit">Visit</button>
-        <button class="btn tabbtn" data-tabid="Stay">Stay</button>
-    </div>
+    
   </section>
 
     <div class="location-container">
-        <h4>Top Location</h4>
+      <section class="tabbar-header">
+        <h1>Top Locations</h4>
+      </section>
+        
+
+        <div class="tabbar">
+          <button class="btn homeTab tabbtn btn-active" data-tabid="All">All</button>
+          <button class="btn homeTab tabbtn" data-tabid="Food">Food</button>
+          <button class="btn homeTab tabbtn" data-tabid="Visit">Visit</button>
+          <button class="btn homeTab tabbtn" data-tabid="Stay">Stay</button>
+        </div>
 
         <div class="location-wrapper"></div>
 

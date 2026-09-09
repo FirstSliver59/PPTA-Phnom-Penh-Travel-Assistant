@@ -7,7 +7,8 @@ window.addEventListener("DOMContentLoaded", () => {
 function main() {
     startSlideshow()
     dotsSetup()
-    locationCardSetup()
+    locationCardSetup("All")
+    tabBarSetup()
 }
 
 // Slideshow
@@ -52,10 +53,18 @@ function dotsSetup(){
 // Location Cards
 
 const locationWrapper = document.querySelector(".location-wrapper")
+const sortedLocations = LOCATIONS.sort(function(a, b){return b.rating - a.rating})
 
-function locationCardSetup(){
+function locationCardSetup(type){
+    locationWrapper.innerHTML = ``
+
+
     for(let i = 0; i < LOCATIONS.length; i++){
-        createLocationCard(i)
+        if(type == "All"){
+            createLocationCard(i)
+        }else if(sortedLocations[i].category == type){
+            createLocationCard(i)
+        }
     }
 }
 
@@ -63,15 +72,15 @@ function createLocationCard(id){
     locationWrapper.innerHTML += `
             <div class="location">
                 <div  class="location-thumbnail">
-                <img src="${LOCATIONS[id].image}" alt="">
-                <a href="#" class="link category">${LOCATIONS[id].category}</a>
+                <img src="${sortedLocations[id].image}" alt="">
+                <a href="#" class="link category">${sortedLocations[id].category}</a>
                 </div>
 
                 <div class="location-detail">
                 <div class="rating">
                     ${getRating(id)}
                 </div>
-                <h4 class="location-name">${LOCATIONS[id].name}</h4>
+                <h4 class="location-name">${sortedLocations[id].name}</h4>
                 <button class="btn detail-btn" id="detail-btn-${id}">Show Details</button>
 
                 </div>
@@ -86,11 +95,11 @@ function createLocationCard(id){
 function getRating(id){
     let rating = ``
 
-    for(let i = 0; i < LOCATIONS[id].rating; i++){
+    for(let i = 0; i < sortedLocations[id].rating; i++){
         rating += `<ion-icon name="star"></ion-icon>`
     }
 
-    for(let i = 0; i < (5 - LOCATIONS[id].rating); i++){
+    for(let i = 0; i < (5 - sortedLocations[id].rating); i++){
         rating += `<ion-icon name="star-outline"></ion-icon>`
     }
 
@@ -99,3 +108,29 @@ function getRating(id){
 
 // Modals
 
+
+
+// Tabbars
+
+const tabBtns = document.querySelectorAll(".homeTab")
+
+function tabBarSetup(){
+    for(let btn of tabBtns){
+        btn.addEventListener("click", () => {
+            setActiveTab(btn)
+        })
+    }
+}
+
+function setActiveTab(activeBtn){
+    for(let btn of tabBtns){
+        if(btn.classList.contains("btn-active")){
+            btn.classList.remove("btn-active")
+        }
+        if(btn == activeBtn){
+            btn.classList.add("btn-active")
+        }
+    }
+
+    locationCardSetup(activeBtn.dataset.tabid)
+}
