@@ -34,8 +34,8 @@ header {
 
 :root {
   --bg: #526446;
-  --txt: #000000;
-  --elm-txt: #000000;
+  --txt: #ece7e7;
+  --elm-txt: #507139;
   --star: #D4AF37;
   --light-txt: #DEDEDE;
   --sec-bg: #F5F5DC;
@@ -122,6 +122,7 @@ ion-icon {
 
 .search-input {
   min-width: 250px;
+  color: var(--light-txt);
 }
 
 .tabbar-header {
