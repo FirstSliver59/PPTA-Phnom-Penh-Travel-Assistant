@@ -54,7 +54,7 @@ function dotsSetup(){
 // Location Cards
 
 const locationWrapper = document.querySelector(".location-wrapper")
-const sortedLocations = LOCATIONS.sort(function(a, b){return b.rating - a.rating})
+let sortedLocations = LOCATIONS.sort(function(a, b){return b.rating - a.rating})
 
 function locationCardSetup(type){
     locationWrapper.innerHTML = ``
@@ -62,9 +62,9 @@ function locationCardSetup(type){
 
     for(let i = 0; i < LOCATIONS.length; i++){
         if(type == "All"){
-            createLocationCard(i)
-        }else if(sortedLocations[i].category == type){
-            createLocationCard(i)
+            createLocationCard(sortedLocations[i])
+        }else if(sortedLocations[i] && sortedLocations[i].category == type){
+            createLocationCard(sortedLocations[i])
         }
     }
 
@@ -78,18 +78,19 @@ function locationCardSetup(type){
 }
 
 function createLocationCard(id){
+    if(!id){return false}
     locationWrapper.innerHTML += `
             <div class="location">
                 <div  class="location-thumbnail">
-                <img src="${sortedLocations[id].image}" alt="">
-                <a href="#" class="link category">${sortedLocations[id].category}</a>
+                <img src="${id.image}" alt="">
+                <a href="#" class="link category">${id.category}</a>
                 </div>
 
                 <div class="location-detail">
                 <div class="rating">
                     ${getRating(id)}
                 </div>
-                <h4 class="location-name">${sortedLocations[id].name}</h4>
+                <h4 class="location-name">${id.name}</h4>
                 <button class="btn detail-btn" data-btnid="${id}">Show Details</button>
 
                 </div>
@@ -101,11 +102,11 @@ function createLocationCard(id){
 function getRating(id){
     let rating = ``
 
-    for(let i = 0; i < sortedLocations[id].rating; i++){
+    for(let i = 0; i < id.rating; i++){
         rating += `<ion-icon name="star"></ion-icon>`
     }
 
-    for(let i = 0; i < (5 - sortedLocations[id].rating); i++){
+    for(let i = 0; i < (5 - id.rating); i++){
         rating += `<ion-icon name="star-outline"></ion-icon>`
     }
 
@@ -121,7 +122,7 @@ function createModal(id){
     <div class="modal-container">
       <div class="modal-overlay">
         <div class="modal-head">
-          <h4>${sortedLocations[id].name}</h4>
+          <h4>${id.name}</h4>
 
           <a href="#" class="link" id="closeBtn">
             <ion-icon name="close-circle"></ion-icon>
@@ -132,30 +133,39 @@ function createModal(id){
           <div class="tabbar">
             <button class="btn modaltabbtn tabbtn btn-active" data-tabid="Description">Description</button>
             <button class="btn modaltabbtn tabbtn" data-tabid="Location">Location</button>
-            <button class="btn modaltabbtn tabbtn" data-tabid="Reviews">Reviews</button>
             <button class="btn modaltabbtn tabbtn" data-tabid="Price">Price</button>
           </div>
 
           <div class="tabbar-body">
             <section class="tab modaltab tab-active" id="Description">
               <h3>Description</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nostrum voluptate optio voluptatum numquam facilis eum autem eveniet expedita obcaecati perspiciatis officiis, ducimus, doloribus modi quod hic esse soluta. In.</p>
+              <p>${id.description}</p>
             </section>
 
             <section class="tab modaltab" id="Location">
-              <h3>Ingredients</h3>
-              <ul>
-                <li>500g desiccated coconut</li>
-                <li>200g plain flour</li>
-                <li>1 egg, beaten</li>
-                <li>50ml vegetable oil</li>
-                <li>70g mayonnaise</li>
-                <li>30g sweet chilli sauce</li>
-              </ul>
+              <h3>Location</h3>
+              <p>${id.location}</p>
             </section>
 
 
-            <section class="tab modaltab" id="Reviews">
+            
+
+            <section class="tab modaltab" id="Price">
+            <h3>Price</h3>
+            <p>${id.price}</p>
+              
+            </section>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    </div>
+    `
+
+    /**<button class="btn modaltabbtn tabbtn" data-tabid="Reviews">Reviews</button>
+     * 
+     *  <section class="tab modaltab" id="Reviews">
               <h3>Directions</h3>
               <div class="step">
                 <h4>Step 1</h4>
@@ -169,18 +179,11 @@ function createModal(id){
                 <h4>Step 3</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, sunt!</p>
               </div>
-            </section>
+            </section> */
 
-            <section class="tab modaltab tab-active" id="Description">
-              
-            </section>
-          </div>
+    const modalContainer = document.querySelector(".modal-container")
 
-        </div>
-      </div>
-    </div>
-    </div>
-    `
+    modalContainer.style.backgroundImage = id.image
 
     const closeBtn = document.querySelector("#closeBtn")
 
@@ -255,7 +258,18 @@ hamburger.addEventListener("click", () => {
 // Search Bar
 
 const searchInput = document.querySelector(".search-input")
+const filterTxt = document.querySelector(".filter")
 
-searchInput.addEventListener("submit", (e) => {
-    console.log(e)
+searchInput.addEventListener("change", () => {
+    sortedLocations = LOCATIONS.filter(function(e){
+        return e.name.toLowerCase().includes(searchInput.value.toLowerCase())
+    }).sort(function(a, b){return b.rating - a.rating})
+
+    locationCardSetup(document.querySelector(".tabbtn.btn-active").dataset.tabid)
+
+    if(searchInput.value == ""){
+        filterTxt.textContent = ""
+    }else{
+        filterTxt.textContent = `Filter = "${searchInput.value}"`
+    }
 })

@@ -32,6 +32,10 @@ header {
   display: flex;
 }
 
+input::placeholder{
+  color: var(--light-txt)
+}
+
 :root {
   --bg: #526446;
   --txt: #ece7e7;
@@ -113,6 +117,7 @@ ion-icon {
 
   background-color: var(--elm-txt);
   padding: 5px;
+  margin-top: 1%;
   border-radius: 15px;
 }
 
@@ -172,6 +177,7 @@ ion-icon {
 
 .search-btn {
   padding: 5px 5px;
+  margin-right: 10px;
   color: var(--elm-txt);
   background-color: var(--elm-bg);
   font-size: 16px;
@@ -362,8 +368,9 @@ ul {
   left: 0;
   margin: 0 auto;
   z-index: 9999;
-  background-image: url('./images/seascape 2.webp');
-  background-size: cover;
+  background-color: var(--bg);
+  /*background-image: url('./images/seascape 2.webp');
+  background-size: cover;*/
 }
 
 

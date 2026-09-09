@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CTA</title>
+    <title>PPTA</title>
     <link rel="stylesheet" href="style.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -17,10 +17,10 @@
         </div>
       </div>
     <div class="flex">
-      <form class="search-bar">
+      <form class="search-bar" onsubmit="return false">
           <ion-icon name="search"></ion-icon>
           <input class="search-input" type="text" name="location" id="location" placeholder="Where would you like to go?" autocomplete="off">
-          <button class="btn">Search</button>
+          <button class="btn search-btn">Search</button>
       </form>
 
       <button id="sidenavBtn">
@@ -70,6 +70,7 @@
     <div class="location-container">
       <section class="tabbar-header">
         <h1>Top Locations</h4>
+        <p class="filter"></p>
       </section>
         
 
