@@ -262,10 +262,19 @@ const filterTxt = document.querySelector(".filter")
 
 searchInput.addEventListener("change", () => {
     sortedLocations = LOCATIONS.filter(function(e){
-        return e.name.toLowerCase().includes(searchInput.value.toLowerCase())
+        return  e.name.toLowerCase().includes(searchInput.value.toLowerCase()) ||
+                e.category.toLowerCase().includes(searchInput.value.toLowerCase()) ||
+                e.description.toLowerCase().includes(searchInput.value.toLowerCase()) ||
+                e.location.toLowerCase().includes(searchInput.value.toLowerCase()) ||
+                e.tags.toLowerCase().includes(searchInput.value.toLowerCase())
+            
+        
+    
     }).sort(function(a, b){return b.rating - a.rating})
 
-    locationCardSetup(document.querySelector(".tabbtn.btn-active").dataset.tabid)
+    setActiveTab(document.querySelector("[data-tabid=All]"))
+
+    locationCardSetup("All")
 
     if(searchInput.value == ""){
         filterTxt.textContent = ""

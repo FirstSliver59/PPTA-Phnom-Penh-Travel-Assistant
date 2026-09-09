@@ -7,7 +7,8 @@ const LOCATIONS = [
         description: "A beach.",
         location: "definitely a real place.",
         price: "It costs nothing to go here.",
-        reviews: ["probably won't have time to use these..."]
+        reviews: ["probably won't have time to use these..."],
+        tags: "ocean sand outside" // Gets added to the search filter
     },
     {
         name: "Hotel",
@@ -17,7 +18,8 @@ const LOCATIONS = [
         description: "Just your average hotel.",
         location: "This place is definitely real, and not just a stock photo. I swear.",
         price: "Uhhh.. $50 a night I guess.",
-        reviews: ["probably won't have time to use these..."]
+        reviews: ["probably won't have time to use these..."],
+        tags: ""
     },
     {
         name: "McDonald's",
@@ -27,7 +29,8 @@ const LOCATIONS = [
         description: "The fast-food restaurant.",
         location: "Mars.",
         price: "More every day. It's 'inflation' trust",
-        reviews: ["probably won't have time to use these..."]
+        reviews: ["probably won't have time to use these..."],
+        tags: ""
     }
     
 ]
