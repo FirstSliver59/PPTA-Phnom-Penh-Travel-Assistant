@@ -9,6 +9,7 @@ function main() {
     dotsSetup()
     locationCardSetup("All")
     tabBarSetup()
+    //createModal(1)
 }
 
 // Slideshow
@@ -66,6 +67,14 @@ function locationCardSetup(type){
             createLocationCard(i)
         }
     }
+
+    let btns = document.querySelectorAll(`[data-btnid]`)
+    for(let btn of btns){
+        btn.addEventListener("click", () => {
+        createModal(btn.dataset.btnid)
+    })
+    }
+    
 }
 
 function createLocationCard(id){
@@ -81,15 +90,12 @@ function createLocationCard(id){
                     ${getRating(id)}
                 </div>
                 <h4 class="location-name">${sortedLocations[id].name}</h4>
-                <button class="btn detail-btn" id="detail-btn-${id}">Show Details</button>
+                <button class="btn detail-btn" data-btnid="${id}">Show Details</button>
 
                 </div>
             </div>
     `
-    let btn = document.querySelector(`#detail-btn-${id}`)
-    btn.addEventListener("click", () => {
-        console.log("I was clicked!")
-    })
+    
 }
 
 function getRating(id){
@@ -108,9 +114,102 @@ function getRating(id){
 
 // Modals
 
+const modalWrapper = document.querySelector(".modal-wrapper")
+
+function createModal(id){
+    modalWrapper.innerHTML = `
+    <div class="modal-container">
+      <div class="modal-overlay">
+        <div class="modal-head">
+          <h4>${sortedLocations[id].name}</h4>
+
+          <a href="#" class="link" id="closeBtn">
+            <ion-icon name="close-circle"></ion-icon>
+          </a>
+        </div>
+
+        <div class="modal-body">
+          <div class="tabbar">
+            <button class="btn modaltabbtn tabbtn btn-active" data-tabid="Description">Description</button>
+            <button class="btn modaltabbtn tabbtn" data-tabid="Location">Location</button>
+            <button class="btn modaltabbtn tabbtn" data-tabid="Reviews">Reviews</button>
+          </div>
+
+          <div class="tabbar-body">
+            <section class="tab modaltab tab-active" id="Description">
+              <h3>Description</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate nostrum voluptate optio voluptatum numquam facilis eum autem eveniet expedita obcaecati perspiciatis officiis, ducimus, doloribus modi quod hic esse soluta. In.</p>
+            </section>
+
+            <section class="tab modaltab" id="Location">
+              <h3>Ingredients</h3>
+              <ul>
+                <li>500g desiccated coconut</li>
+                <li>200g plain flour</li>
+                <li>1 egg, beaten</li>
+                <li>50ml vegetable oil</li>
+                <li>70g mayonnaise</li>
+                <li>30g sweet chilli sauce</li>
+              </ul>
+            </section>
 
 
-// Tabbars
+            <section class="tab modaltab" id="Reviews">
+              <h3>Directions</h3>
+              <div class="step">
+                <h4>Step 1</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, sunt!</p>
+              </div>
+              <div class="step">
+                <h4>Step 2</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, sunt!</p>
+              </div>
+              <div class="step">
+                <h4>Step 3</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, sunt!</p>
+              </div>
+            </section>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    </div>
+    `
+
+    const closeBtn = document.querySelector("#closeBtn")
+
+    closeBtn.addEventListener("click", () => {
+        modalWrapper.innerHTML = ``
+    })
+
+    const tabBtns = document.querySelectorAll(".modaltabbtn")
+    const tabs = document.querySelectorAll(".modaltab")
+
+    for(let tab of tabBtns){
+        tab.addEventListener("click", () => {
+            setModalTab(tab, tabBtns)
+            for(let tabBox of tabs){
+                tabBox.classList.remove("tab-active")
+                if(tabBox.id == tab.dataset.tabid){
+                    tabBox.classList.add("tab-active")
+                }
+            }
+        })
+    }
+}
+
+function setModalTab(activeTab, tabs){
+    for(let tab of tabs){
+        if(tab.classList.contains("btn-active")){
+            tab.classList.remove("btn-active")
+        }else if(tab == activeTab){
+            tab.classList.add("btn-active")
+        }
+    }
+}
+
+// Home Tabbar
 
 const tabBtns = document.querySelectorAll(".homeTab")
 
