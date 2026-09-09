@@ -9,7 +9,6 @@ function main() {
     dotsSetup()
     locationCardSetup("All")
     tabBarSetup()
-    //createModal(1)
 }
 
 // Slideshow
@@ -71,7 +70,7 @@ function locationCardSetup(type){
     let btns = document.querySelectorAll(`[data-btnid]`)
     for(let btn of btns){
         btn.addEventListener("click", () => {
-        createModal(btn.dataset.btnid)
+        createModal(sortedLocations[btn.dataset.btnid])
     })
     }
     
@@ -91,7 +90,7 @@ function createLocationCard(id){
                     ${getRating(id)}
                 </div>
                 <h4 class="location-name">${id.name}</h4>
-                <button class="btn detail-btn" data-btnid="${id}">Show Details</button>
+                <button class="btn detail-btn" data-btnid="${sortedLocations.indexOf(id)}">Show Details</button>
 
                 </div>
             </div>
@@ -248,11 +247,7 @@ const hamburger = document.querySelector("#sidenavBtn")
 const sidenav = document.querySelector(".sidenav")
 
 hamburger.addEventListener("click", () => {
-    if(sidenav.classList.contains("showSidenav")){
-        sidenav.classList.remove("showSidenav")
-    }else{
-        sidenav.classList.add("showSidenav")
-    }
+    sidenav.classList.toggle("showSidenav")
 })
 
 const aboutUsPage = document.querySelector(".aboutUsContainer")
@@ -260,7 +255,15 @@ const homeBtn = document.querySelector(".homeBtn")
 const aboutUsBtn = document.querySelector(".aboutUsBtn")
 
 homeBtn.addEventListener("click", () => {
+    if(!aboutUsPage.classList.contains("hide")){
+        aboutUsPage.style.animation = "fadeOut 1s"
+        setTimeout(() => {
+            aboutUsPage.classList.toggle("hide")
+            aboutUsPage.style.animation = "fade 1s"
+        }, 900);
+    }
     window.scrollTo(0, 0)
+    sidenav.classList.toggle("showSidenav")
 })
 
 aboutUsBtn.addEventListener("click", () => {
@@ -270,13 +273,14 @@ aboutUsBtn.addEventListener("click", () => {
             aboutUsPage.classList.toggle("hide")
             aboutUsPage.style.animation = "fade 1s"
         }, 900);
+        
     }else{
         aboutUsPage.classList.toggle("hide")
+        window.scrollTo(0, 0)
     }
+
+    sidenav.classList.toggle("showSidenav")
     
-    
-    
-    window.scrollTo(0, 0)
 })
 
 
