@@ -88,6 +88,7 @@ img {
   padding: 5px;
   font-weight: 300;
   letter-spacing: 1.2;
+  cursor: pointer;
 }
 
 .logo {
@@ -149,8 +150,8 @@ ion-icon {
   place-content: center;
   gap: 25px;
   
-  position: absolute;
-  z-index: 99;
+  position: fixed;
+  z-index: 999;
   left: 0;
   right: 0;
   height: 0;
@@ -209,6 +210,20 @@ ion-icon {
   100% {
     opacity: 1;
   }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+.fadeOut{
+  animation: fadeOut 1s;
 }
 
 .slide-location {
@@ -400,4 +415,19 @@ ul {
 
 .tab-active {
   display: block;
+}
+
+/* About Us Page */
+
+.aboutUsContainer{
+  width: 100%;
+  height: 100vh;
+  z-index: 998;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  background-color: var(--bg);
+  animation: fade 1s;
 }

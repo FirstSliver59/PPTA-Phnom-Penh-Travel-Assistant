@@ -255,6 +255,32 @@ hamburger.addEventListener("click", () => {
     }
 })
 
+const aboutUsPage = document.querySelector(".aboutUsContainer")
+const homeBtn = document.querySelector(".homeBtn")
+const aboutUsBtn = document.querySelector(".aboutUsBtn")
+
+homeBtn.addEventListener("click", () => {
+    window.scrollTo(0, 0)
+})
+
+aboutUsBtn.addEventListener("click", () => {
+    if(!aboutUsPage.classList.contains("hide")){
+        aboutUsPage.style.animation = "fadeOut 1s"
+        setTimeout(() => {
+            aboutUsPage.classList.toggle("hide")
+            aboutUsPage.style.animation = "fade 1s"
+        }, 900);
+    }else{
+        aboutUsPage.classList.toggle("hide")
+    }
+    
+    
+    
+    window.scrollTo(0, 0)
+})
+
+
+
 // Search Bar
 
 const searchInput = document.querySelector(".search-input")
