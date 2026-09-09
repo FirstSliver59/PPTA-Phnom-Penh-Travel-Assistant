@@ -131,6 +131,32 @@ ion-icon {
   color: var(--txt)
 }
 
+.sidenav {
+
+  width: 100%;
+  text-align: center;
+  background-color: var(--sec-bg);
+  border-top: 2px solid var(--outline);
+  
+  display: grid;
+  place-content: center;
+  gap: 25px;
+  
+  position: absolute;
+  z-index: 99;
+  left: 0;
+  right: 0;
+  height: 0;
+  overflow: hidden;
+
+  transition: all 500ms;
+}
+
+.showSidenav {
+  height: 200px;
+  padding: 25px;
+}
+
 /*Buttons*/
 
 .btn {

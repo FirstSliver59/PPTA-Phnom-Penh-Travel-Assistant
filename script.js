@@ -134,3 +134,16 @@ function setActiveTab(activeBtn){
 
     locationCardSetup(activeBtn.dataset.tabid)
 }
+
+// Sidenav
+
+const hamburger = document.querySelector("#sidenavBtn")
+const sidenav = document.querySelector(".sidenav")
+
+hamburger.addEventListener("click", () => {
+    if(sidenav.classList.contains("showSidenav")){
+        sidenav.classList.remove("showSidenav")
+    }else{
+        sidenav.classList.add("showSidenav")
+    }
+})
