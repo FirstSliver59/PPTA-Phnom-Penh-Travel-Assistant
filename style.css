@@ -12,7 +12,7 @@ html {
 }
 
 body {
-    background-color: darkblue;
+    background-color: var(--bg);
     color: white;
 }
 
@@ -33,15 +33,16 @@ header {
 }
 
 :root {
-  --bg: #F7ECDE;
+  --bg: #526446;
   --txt: #000000;
-  --elm-txt: #FFFFFF;
+  --elm-txt: #000000;
+  --star: #D4AF37;
   --light-txt: #DEDEDE;
-  --sec-bg: #283618;
-  --link-bg: #606C38;
-  --elm-bg: #BC6C25;
-  --outline: #DDA15E;
-}
+  --sec-bg: #F5F5DC;
+  --link-bg: #a0816c;
+  --elm-bg: #848c67;
+  --outline: #E1DBCA;
+} /*#E6BEAA*/
 
 a, input, button, textarea {
   text-decoration: none;
@@ -71,7 +72,7 @@ img {
 }
 
 .category {
-  background-color: var(--link-bg);
+  background-color: var(--star);
   border-radius: 15px;
   padding: 7.5px 15px;
   /* margin: 25px; */
@@ -271,7 +272,7 @@ ion-icon {
 }
 
 .location-detail .rating ion-icon {
-  /* color: var(--elm-bg); */
+  color: var(--star); 
   font-size: 20px;
   margin-left: 3%;
   margin-right: 3%;

@@ -133,6 +133,7 @@ function createModal(id){
             <button class="btn modaltabbtn tabbtn btn-active" data-tabid="Description">Description</button>
             <button class="btn modaltabbtn tabbtn" data-tabid="Location">Location</button>
             <button class="btn modaltabbtn tabbtn" data-tabid="Reviews">Reviews</button>
+            <button class="btn modaltabbtn tabbtn" data-tabid="Price">Price</button>
           </div>
 
           <div class="tabbar-body">
@@ -168,6 +169,10 @@ function createModal(id){
                 <h4>Step 3</h4>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, sunt!</p>
               </div>
+            </section>
+
+            <section class="tab modaltab tab-active" id="Description">
+              
             </section>
           </div>
 
