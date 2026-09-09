@@ -251,3 +251,11 @@ hamburger.addEventListener("click", () => {
         sidenav.classList.add("showSidenav")
     }
 })
+
+// Search Bar
+
+const searchInput = document.querySelector(".search-input")
+
+searchInput.addEventListener("submit", (e) => {
+    console.log(e)
+})
