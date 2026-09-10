@@ -135,7 +135,7 @@ function createModal(id){
           <div class="tabbar">
             <button class="btn modaltabbtn tabbtn btn-active" data-tabid="Description">Description</button>
             <button class="btn modaltabbtn tabbtn" data-tabid="Location">Location</button>
-            <button class="btn modaltabbtn tabbtn" data-tabid="Price">Price</button>
+scm-history-item:c%3A%5CUsers%5CZISPP-COMPUTER%5CDownloads%5CNew%20folder?%7B%22repositoryId%22%3A%22scm0%22%2C%22historyItemId%22%3A%22adf5b143b5d44d195c4285f42a6ec51885705948%22%2C%22historyItemParentId%22%3A%22b9497119864e17d9e42fa8e849c11739aeb561b5%22%2C%22historyItemDisplayId%22%3A%22adf5b14%22%7D            <button class="btn modaltabbtn tabbtn" data-tabid="Price">Price</button>
           </div>
 
           <div class="tabbar-body">
