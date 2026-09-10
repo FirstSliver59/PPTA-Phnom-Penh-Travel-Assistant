@@ -82,7 +82,10 @@ function createLocationCard(id){
             <div class="location">
                 <div  class="location-thumbnail">
                 <img src="${id.image}" alt="">
-                <a href="#" class="link category">${id.category}</a>
+                <div class="flex">
+                    <a href="#" class="link category">${id.category}</a>
+                    <a href="#" class="link area">${id.area}</a>
+                </div>
                 </div>
 
                 <div class="location-detail">
@@ -258,10 +261,10 @@ const aboutUsBtn = document.querySelector(".aboutUsBtn")
 
 homeBtn.addEventListener("click", () => {
     if(!aboutUsPage.classList.contains("hide")){
-        aboutUsPage.style.animation = "fadeOut 1s"
+        aboutUsPage.style.animation = "slideOut 1s"
         setTimeout(() => {
             aboutUsPage.classList.toggle("hide")
-            aboutUsPage.style.animation = "fade 1s"
+            aboutUsPage.style.animation = "slide 1s"
         }, 900);
     }
     window.scrollTo(0, 0)
@@ -270,10 +273,10 @@ homeBtn.addEventListener("click", () => {
 
 aboutUsBtn.addEventListener("click", () => {
     if(!aboutUsPage.classList.contains("hide")){
-        aboutUsPage.style.animation = "fadeOut 1s"
+        aboutUsPage.style.animation = "slideOut 1s"
         setTimeout(() => {
             aboutUsPage.classList.toggle("hide")
-            aboutUsPage.style.animation = "fade 1s"
+            aboutUsPage.style.animation = "slide 1s"
         }, 900);
         
     }else{

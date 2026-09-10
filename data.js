@@ -2,6 +2,7 @@ const LOCATIONS = [
     {
         name: "Seaside",
         category: "Visit",
+        area: "TTP",
         image: "./images/seascape 4.jpeg",
         rating: 3,
         description: "A beach.",
