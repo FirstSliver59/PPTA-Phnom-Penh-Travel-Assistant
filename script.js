@@ -182,7 +182,9 @@ function createModal(id){
 
     const modalContainer = document.querySelector(".modal-container")
 
-    modalContainer.style.backgroundImage = id.image
+    modalContainer.style.backgroundImage = "./images/stay test.jpeg"
+    console.log(id.image)
+    console.log(modalContainer.style.backgroundImage)
 
     const closeBtn = document.querySelector("#closeBtn")
 
