@@ -155,7 +155,7 @@ function createModal(id){
 
             <section class="tab modaltab" id="Location">
               <h3>Location</h3>
-              <a href="${id.location}">${id.locationtxt}</a>
+              <a class="link" href="${id.location}">${id.locationtxt} <-- Click for Map</a>
             </section>
 
 

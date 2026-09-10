@@ -331,13 +331,13 @@ footer{
 
 .location-thumbnail .category {
   position: absolute;
-  top: 45px;
+  top: 15px;
   left: 15px;
 }
 
 .location-thumbnail .area {
   position: absolute;
-  top: 15px;
+  top: 45px;
   left: 15px;
 }
 
