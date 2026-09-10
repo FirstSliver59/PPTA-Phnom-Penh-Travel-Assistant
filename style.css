@@ -165,6 +165,15 @@ ion-icon {
   padding: 25px;
 }
 
+footer{
+    background: var(--outline);
+    height: auto;
+    width: 100%;
+    padding-top: 10px;
+    color: var(--bg);
+    justify-content: space-between;
+}
+
 /*Buttons*/
 
 .btn {
