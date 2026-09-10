@@ -104,13 +104,22 @@ function createLocationCard(id){
 function getRating(id){
     let rating = ``
 
-    for(let i = 0; i < id.rating; i++){
+    for(let i = 0; i < Math.floor(id.rating); i++){
         rating += `<ion-icon name="star"></ion-icon>`
     }
 
-    for(let i = 0; i < (5 - id.rating); i++){
-        rating += `<ion-icon name="star-outline"></ion-icon>`
+    if(id.rating % 1 != 0){
+        rating += `<ion-icon name="star-half-outline"></ion-icon>`
+        for(let i = 0; i < (5 - Math.ceil(id.rating)); i++){
+            rating += `<ion-icon name="star-outline"></ion-icon>`
+        }
+    }else{
+        for(let i = 0; i < (5 - id.rating); i++){
+            rating += `<ion-icon name="star-outline"></ion-icon>`
+        }
     }
+
+    
 
     return rating
 }
@@ -135,7 +144,7 @@ function createModal(id){
           <div class="tabbar">
             <button class="btn modaltabbtn tabbtn btn-active" data-tabid="Description">Description</button>
             <button class="btn modaltabbtn tabbtn" data-tabid="Location">Location</button>
-scm-history-item:c%3A%5CUsers%5CZISPP-COMPUTER%5CDownloads%5CNew%20folder?%7B%22repositoryId%22%3A%22scm0%22%2C%22historyItemId%22%3A%22adf5b143b5d44d195c4285f42a6ec51885705948%22%2C%22historyItemParentId%22%3A%22b9497119864e17d9e42fa8e849c11739aeb561b5%22%2C%22historyItemDisplayId%22%3A%22adf5b14%22%7D            <button class="btn modaltabbtn tabbtn" data-tabid="Price">Price</button>
+            <button class="btn modaltabbtn tabbtn" data-tabid="Price">Price</button>
           </div>
 
           <div class="tabbar-body">
@@ -146,7 +155,7 @@ scm-history-item:c%3A%5CUsers%5CZISPP-COMPUTER%5CDownloads%5CNew%20folder?%7B%22
 
             <section class="tab modaltab" id="Location">
               <h3>Location</h3>
-              <a href="${id.map}">${id.location}</a>
+              <a href="${id.location}">${id.locationtxt}</a>
             </section>
 
 
