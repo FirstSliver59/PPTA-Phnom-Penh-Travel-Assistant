@@ -479,3 +479,7 @@ ul {
   background-color: var(--bg);
   animation: slide 1s;
 }
+
+.aboutUsTitle{
+  padding-top: 20%;
+}
