@@ -1,11 +1,11 @@
 const LOCATIONS = [
     {
-        name: "The Collab Coffee",
-        category: "Drinks only",
-        image: "./images/the collab.jpg",
-        rating: 4.8,
-        description: "A Coffee shop that sells all kinds of drinks but their specialty is matcha",
-        location: "TTP st 138 https://www.google.com/maps/place/The+collab+coffee/@11.5665701,104.8247638,13z/data=!4m10!1m2!2m1!1sthe+collab+coffee+ttp!3m6!1s0x310951000428cea1:0x8fa36fd265c0de3e!8m2!3d11.5665701!4d104.9009815!15sChV0aGUgY29sbGFiIGNvZmZlZSB0dHBaFyIVdGhlIGNvbGxhYiBjb2ZmZWUgdHRwkgELY29mZmVlX3Nob3CaAURDaTlEUVVsUlFVTnZaRU5vZEhsalJqbHZUMnhDTVZKVE1YRlVNamw2WWxWc2JWcHJlR0ZQUlZZd1RtdG9kbGRGUlJBQuABAPoBBAgAECQ!16s%2Fg%2F11x0dfwgjc?entry=ttu&g_ep=EgoyMDI2MDkwNi4wIKXMDSoASAFQAw%3D%3D",
+        name: "Seaside",
+        category: "Visit",
+        image: "./images/seascape 4.jpeg",
+        rating: 3,
+        description: "A beach.",
+        location: "definitely a real place.",
         price: "It costs nothing to go here.",
         reviews: ["probably won't have time to use these..."],
         tags: "ocean sand outside" // Gets added to the search filter
