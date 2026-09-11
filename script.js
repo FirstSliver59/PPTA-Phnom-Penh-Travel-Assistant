@@ -194,13 +194,14 @@ function createModal(id){
 
     const modalContainer = document.querySelector(".modal-container")
 
-    modalContainer.style.backgroundImage = "./images/stay test.jpeg"
+    modalContainer.style.backgroundImage = `url(${id.image})`
     console.log(id.image)
     console.log(modalContainer.style.backgroundImage)
 
     const closeBtn = document.querySelector("#closeBtn")
 
-    closeBtn.addEventListener("click", () => {
+    closeBtn.addEventListener("click", (e) => {
+        e.preventDefault()
         modalWrapper.innerHTML = ``
     })
 

@@ -16,7 +16,7 @@ const LOCATIONS = [
     {
         name: "Hotel",
         category: "Stay",
-        image: "./images/stay test.jpeg",
+        image: "./images/stay_test.jpeg",
         rating: 5,
         description: "Just your average hotel.",
         location: "This place is definitely real, and not just a stock photo. I swear.",
