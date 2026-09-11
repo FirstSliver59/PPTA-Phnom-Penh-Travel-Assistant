@@ -468,6 +468,7 @@ ul {
 /* About Us Page */
 
 .aboutUsContainer{
+  padding-top: 15%;
   width: 100%;
   height: 100vh;
   z-index: 998;
@@ -481,5 +482,9 @@ ul {
 }
 
 .aboutUsTitle{
-  padding-top: 20%;
+  padding-top: 0%;
+}
+
+.aboutUsContainer ion-icon{
+  color: var(--outline);
 }

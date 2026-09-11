@@ -194,9 +194,9 @@ function createModal(id){
 
     const modalContainer = document.querySelector(".modal-container")
 
-    modalContainer.style.backgroundImage = `url(${id.image})`
+    /*modalContainer.style.backgroundImage = `url(${id.image})`
     console.log(id.image)
-    console.log(modalContainer.style.backgroundImage)
+    console.log(modalContainer.style.backgroundImage)*/
 
     const closeBtn = document.querySelector("#closeBtn")
 
@@ -296,6 +296,17 @@ aboutUsBtn.addEventListener("click", () => {
 
     sidenav.classList.toggle("showSidenav")
     
+})
+
+const aboutUsClose = document.querySelector(".about-us-btn")
+
+aboutUsClose.addEventListener("click", () => {
+    aboutUsPage.style.animation = "slideOut 1s"
+    setTimeout(() => {
+        aboutUsPage.classList.toggle("hide")
+        aboutUsPage.style.animation = "slide 1s"
+    }, 900);
+    window.scrollTo(0, 0)
 })
 
 

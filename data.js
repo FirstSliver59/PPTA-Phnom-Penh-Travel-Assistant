@@ -3,7 +3,7 @@ const LOCATIONS = [
         name: "The Collab Coffee",
         category: "Drinks only",
         categoryId: "Food", // Please only use "Food", "Visit", or "Stay". For use with the filter tabs
-        image: "./images/the collab.jpg",
+        image: "./images/the_collab.jpg",
         rating: 4.8, // Will only be displayed to the nearest 0.5 stars
         description: "A Coffee shop that sells all kinds of drinks but their specialty is matcha.",
         locationtxt: "TTP st 138", // Name of location, put link in "location: "
