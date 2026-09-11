@@ -3,6 +3,7 @@ window.addEventListener("DOMContentLoaded", () => {
     main()
 })
 
+const footer = document.querySelector("footer")
 
 function main() {
     startSlideshow()
@@ -74,6 +75,11 @@ function locationCardSetup(type){
     })
     }
     
+    if(locationWrapper.innerHTML == `` && !footer.classList.contains("fixed")){
+        footer.classList.add("fixed")
+    }else if(locationWrapper.innerHTML != `` && footer.classList.contains("fixed")){
+        footer.classList.remove("fixed")
+    }
 }
 
 function createLocationCard(id){

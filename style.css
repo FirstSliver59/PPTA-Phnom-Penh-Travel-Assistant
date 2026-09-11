@@ -14,6 +14,7 @@ html {
 body {
     background-color: var(--bg);
     color: white;
+    height: 100%;
 }
 
 header {
@@ -173,12 +174,17 @@ ion-icon {
 }
 
 footer{
+    bottom:0;
     background: var(--outline);
     height: auto;
     width: 100%;
     padding-top: 10px;
     color: var(--bg);
     justify-content: space-between;
+}
+
+.fixed{
+  position: fixed;
 }
 
 /*Buttons*/
@@ -367,6 +373,7 @@ footer{
 
 .location-wrapper {
   padding: 10px;
+  height: 100%;
   /* display: grid;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
@@ -487,4 +494,8 @@ ul {
 
 .aboutUsContainer ion-icon{
   color: var(--outline);
+}
+
+.aba{
+  object-fit:none;
 }
