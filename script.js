@@ -63,7 +63,7 @@ function locationCardSetup(type){
     for(let i = 0; i < LOCATIONS.length; i++){
         if(type == "All"){
             createLocationCard(sortedLocations[i])
-        }else if(sortedLocations[i] && sortedLocations[i].category == type){
+        }else if(sortedLocations[i] && sortedLocations[i].categoryId == type){
             createLocationCard(sortedLocations[i])
         }
     }
@@ -76,9 +76,9 @@ function locationCardSetup(type){
     }
     
     if(locationWrapper.innerHTML == `` && !footer.classList.contains("fixed")){
-        footer.classList.add("fixed")
+        //footer.classList.add("fixed")
     }else if(locationWrapper.innerHTML != `` && footer.classList.contains("fixed")){
-        footer.classList.remove("fixed")
+        //footer.classList.remove("fixed")
     }
 }
 
