@@ -327,7 +327,7 @@ searchInput.addEventListener("change", () => {
         return  e.name.toLowerCase().includes(searchInput.value.toLowerCase()) ||
                 e.category.toLowerCase().includes(searchInput.value.toLowerCase()) ||
                 e.description.toLowerCase().includes(searchInput.value.toLowerCase()) ||
-                e.location.toLowerCase().includes(searchInput.value.toLowerCase()) ||
+                e.locationtxt.toLowerCase().includes(searchInput.value.toLowerCase()) ||
                 e.tags.toLowerCase().includes(searchInput.value.toLowerCase())
             
         
