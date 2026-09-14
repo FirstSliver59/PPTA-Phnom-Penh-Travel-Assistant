@@ -626,17 +626,6 @@ const LOCATIONS = [
         reviews: ["probably won't have time to use these..."],
         tags: ""
     },
-    {
-        name: "McDonald's",
-        category: "Food",
-        image: "./images/food test.jpeg",
-        rating: 4,
-        description: "The fast-food restaurant.",
-        location: "Mars.",
-        price: "More every day. It's 'inflation' trust",
-        reviews: ["probably won't have time to use these..."],
-        tags: ""
-    }
     
 ]
 
