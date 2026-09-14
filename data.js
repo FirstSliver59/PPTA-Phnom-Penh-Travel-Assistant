@@ -614,18 +614,7 @@ const LOCATIONS = [
     price: "From $49 per night",
     reviews: ["Beautiful Khmer-inspired boutique hotel with a relaxing pool."],
     tags: "prampirmakara"
-  },
-    {
-        name: "Hotel",
-        category: "Stay",
-        image: "./images/stay_test.jpeg",
-        rating: 5,
-        description: "Just your average hotel.",
-        location: "This place is definitely real, and not just a stock photo. I swear.",
-        price: "Uhhh.. $50 a night I guess.",
-        reviews: ["probably won't have time to use these..."],
-        tags: ""
-    },
+  }
     
 ]
 
