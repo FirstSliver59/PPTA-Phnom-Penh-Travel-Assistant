@@ -1,7 +1,7 @@
 const LOCATIONS = [
     {
         name: "The Collab Coffee",
-        category: "Drinks only",
+        category: "Drinks",
         categoryId: "Food", // Please only use "Food", "Visit", or "Stay". For use with the filter tabs
         image: "./images/the_collab.jpg",
         rating: 4.8, // Will only be displayed to the nearest 0.5 stars
@@ -59,7 +59,7 @@ const LOCATIONS = [
     name: "iRoHa Garden Hotel & Resort",
     category: "Boutique Hotel",
     categoryId: "Stay",
-    image: "./images/iroha.jpg",
+    image: "./images/iRoHa Garden Hotel & Resort.jpg",
     rating: 4.8,
     description: "A peaceful boutique resort with a tropical garden and swimming pool just minutes from Russian Market.",
     locationtxt: "Street 73, Toul Tom Poung",
@@ -87,7 +87,7 @@ const LOCATIONS = [
     name: "The Frangipani Living Arts Hotel & Spa",
     category: "Boutique Hotel",
     categoryId: "Stay",
-    image: "./images/frangipani.jpg",
+    image: "./images/The Frangipani Living Arts Hotel & Spa.jpg",
     rating: 4.6,
     description: "A stylish boutique stay known for its Khmer-inspired design, outdoor pool, and relaxing atmosphere close to the Russian Market.",
     locationtxt: "Street 123, Toul Tom Poung",
@@ -101,7 +101,7 @@ const LOCATIONS = [
     name: "Dutch Hosted B&B",
     category: "Bed & Breakfast",
     categoryId: "Stay",
-    image: "./images/dutch-hosted.jpg",
+    image: "./images/Dutch Hosted B&B.jpg",
     rating: 4.8,
     description: "A cozy and highly rated guesthouse offering personalized service, modern rooms, and a quiet neighborhood just minutes from TTP.",
     locationtxt: "Street 105, Toul Tom Poung",
@@ -115,7 +115,7 @@ const LOCATIONS = [
     name: "Ny Ka Smy Hotel",
     category: "Budget Hotel",
     categoryId: "Stay",
-    image: "./images/nyka.jpg",
+    image: "./images/Ny Ka Smy Hotel.jpg",
     rating: 4.5,
     description: "A modern budget-friendly hotel with clean rooms, free Wi-Fi, and excellent value for travelers staying in the Toul Tom Poung area.",
     locationtxt: "Street 430, Toul Tom Poung",
