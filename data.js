@@ -17,7 +17,7 @@ const LOCATIONS = [
         name: "Marugame Udon",
         category: "Foods",
         categoryId: "Food", // Please only use "Food", "Visit", or "Stay". For use with the filter tabs
-        image: "./images/Marugame udon.jpg",
+        image: "./images/Marugame.jpg",
         rating: 4.0, // Will only be displayed to the nearest 0.5 stars
         description: "A Japanese Udon restaruant that originally sells Udon but later on developing new dishes like fried chicken rice...etc",
         locationtxt: "TTP st 155 corner of st 472", // Name of location, put link in "location: "
@@ -31,7 +31,7 @@ const LOCATIONS = [
         name: "MeatoPhum",
         category: "Foods",
         categoryId: "Food", // Please only use "Food", "Visit", or "Stay". For use with the filter tabs
-        image: "./images/meatophum.avif",
+        image: "./images/meatophum.jpg",
         rating: 3.5, // Will only be displayed to the nearest 0.5 stars
         description: "A cambodian restaraunt that sells Cambodian food, if struggling to find a cambodian restaraunt that provide amazing Khmer dishes, meatophum is the way to go.",
         locationtxt: "TTP st 430", // Name of location, put link in "location: "
@@ -45,7 +45,7 @@ const LOCATIONS = [
         name: "Mealea",
         category: "Foods",
         categoryId: "Food", // Please only use "Food", "Visit", or "Stay". For use with the filter tabs
-        image: "./images/unnamed.jpg",
+        image: "./images/mealea.jpg",
         rating: 4.5, // Will only be displayed to the nearest 0.5 stars
         description: "A cambodian  fancy restaraunt that sells Cambodian food, if struggling to find a cambodian restaraunt that provide amazing Khmer dishes, mealea is the way to go.",
         locationtxt: "corner of, 44, Sothearos Blvd, street 240, Chumne 12206", // Name of location, put link in "location: "
