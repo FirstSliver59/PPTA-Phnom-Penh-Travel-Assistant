@@ -63,7 +63,7 @@ function locationCardSetup(type){
     for(let i = 0; i < LOCATIONS.length; i++){
         if(type == "All"){
             createLocationCard(sortedLocations[i])
-        }else if(sortedLocations[i] && sortedLocations[i].category == type){
+        }else if(sortedLocations[i] && sortedLocations[i].categoryId == type){
             createLocationCard(sortedLocations[i])
         }
     }
