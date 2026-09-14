@@ -76,9 +76,9 @@ function locationCardSetup(type){
     }
     
     if(locationWrapper.innerHTML == `` && !footer.classList.contains("fixed")){
-        footer.classList.add("fixed")
+        //footer.classList.add("fixed")
     }else if(locationWrapper.innerHTML != `` && footer.classList.contains("fixed")){
-        footer.classList.remove("fixed")
+        //footer.classList.remove("fixed")
     }
 }
 
