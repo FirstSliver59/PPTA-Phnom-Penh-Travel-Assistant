@@ -810,20 +810,6 @@ const LOCATIONS = [
     price: "Free entry.",
     reviews: ["Huge home and lifestyle venue in upper Sen Sok."],
     tags: "sensok globalhouse lifestyle shopping visit"
-  },
-  {
-    name: "Phnom Penh Country Club & Sports Grounds",
-    category: "Recreation & Parks",
-    categoryId: "Visit",
-    image: "./images/sen_sok_sports.jpg",
-    rating: 4.5,
-    description: "A leisure hub featuring outdoor driving ranges, sports facilities, and open green areas for family recreation.",
-    locationtxt: "St 2004, Sen Sok",
-    location: "https://maps.google.com/?q=Sen+Sok+Phnom+Penh",
-    area: "Sen Sok",
-    price: "Varies by facility.",
-    reviews: ["Spacious and quiet recreational area in the district."],
-    tags: "sensok sports recreation outdoor family visit"
   }
     
 ]
