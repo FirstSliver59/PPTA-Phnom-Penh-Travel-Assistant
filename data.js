@@ -42,6 +42,76 @@ const LOCATIONS = [
         tags: "ttp" // Gets added to the search filter - not displayed for user
     },
     {
+        name: "Super Meats",
+        category: "Food",
+        categoryId: "Food", // Please only use "Food", "Visit", or "Stay". For use with the filter tabs
+        image: "./images/supermeats.jpg",
+        rating: 4.9, // Will only be displayed to the nearest 0.5 stars
+        description: "Sells the best burgers I've had since being in Cambodia, as well as boere rolls. They are only open on saturdays, though.",
+        locationtxt: "TTP st 456", // Name of location, put link in "location: "
+        location: "https://www.google.com/maps/place/Super+Meats/@11.5389618,104.9145149,17z/data=!3m1!4b1!4m6!3m5!1s0x310951d36338f5d5:0x248fcb2e0413fa23!8m2!3d11.5389618!4d104.9145149!16s%2Fg%2F11hf258b47?entry=ttu&g_ep=EgoyMDI2MDkxMy4wIKXMDSoASAFQAw%3D%3D",
+        area: "TTP", // Broad area tag that is shown on the card
+        price: "3-5$ per person",
+        reviews: ["probably won't have time to use these..."], // Probably don't fill this out
+        tags: "ttp" // Gets added to the search filter - not displayed for user
+    },
+    {
+        name: "BKK1 Mixed Rice",
+        category: "Food",
+        categoryId: "Food", // Please only use "Food", "Visit", or "Stay". For use with the filter tabs
+        image: "./images/mixedrice.jpg",
+        rating: 4.9, // Will only be displayed to the nearest 0.5 stars
+        description: "They sell rice bowls with toppings.",
+        locationtxt: "BKK1 st 294", // Name of location, put link in "location: "
+        location: "https://www.google.com/maps/place/BKK1+Mixed+Rice/@11.5532341,104.9204487,17z/data=!3m1!4b1!4m6!3m5!1s0x3109510023c77d17:0x6090ac5d48941335!8m2!3d11.5532289!4d104.9230236!16s%2Fg%2F11yyxbx3wf?entry=ttu&g_ep=EgoyMDI2MDkxMy4wIKXMDSoASAFQAw%3D%3D",
+        area: "BKK1", // Broad area tag that is shown on the card
+        price: "1-5$ per person",
+        reviews: ["probably won't have time to use these..."], // Probably don't fill this out
+        tags: "bkk1" // Gets added to the search filter - not displayed for user
+    },
+    {
+        name: "Eleven One Kitchen",
+        category: "Food",
+        categoryId: "Food", // Please only use "Food", "Visit", or "Stay". For use with the filter tabs
+        image: "./images/elevenone.jpeg",
+        rating: 4.5, // Will only be displayed to the nearest 0.5 stars
+        description: "A variety of Cambodian food, including all you can eat and vegan options.",
+        locationtxt: "BKK1 st 334", // Name of location, put link in "location: "
+        location: "https://www.google.com/maps/place/Eleven+One+Kitchen+-+BKK1/@11.5501525,104.9238127,17z/data=!3m1!4b1!4m6!3m5!1s0x310951241139ee63:0xe367aa8b9c37ce64!8m2!3d11.5501473!4d104.9263876!16s%2Fg%2F11dxc0gvh3?entry=ttu&g_ep=EgoyMDI2MDkxMy4wIKXMDSoASAFQAw%3D%3D",
+        area: "BKK1", // Broad area tag that is shown on the card
+        price: "10-15$ per person",
+        reviews: ["probably won't have time to use these..."], // Probably don't fill this out
+        tags: "bkk1" // Gets added to the search filter - not displayed for user
+    },
+    {
+        name: "Farm To Table",
+        category: "Food",
+        categoryId: "Food", // Please only use "Food", "Visit", or "Stay". For use with the filter tabs
+        image: "./images/farmtotable.jpeg",
+        rating: 4.4, // Will only be displayed to the nearest 0.5 stars
+        description: "Relaxed, modern outdoor eatery offering a locally sourced menu of international dishes & cocktails.",
+        locationtxt: "BKK1 st 360", // Name of location, put link in "location: "
+        location: "https://www.google.com/maps/place/Farm+To+Table/@11.5487176,104.9238975,17z/data=!4m8!3m7!1s0x31095125fd4a7bd1:0x2039e90e4d655271!8m2!3d11.5487124!4d104.9264724!9m1!1b1!16s%2Fg%2F11cly59f9t?entry=ttu&g_ep=EgoyMDI2MDkxMy4wIKXMDSoASAFQAw%3D%3D",
+        area: "BKK1", // Broad area tag that is shown on the card
+        price: "5-10$ per person",
+        reviews: ["probably won't have time to use these..."], // Probably don't fill this out
+        tags: "bkk1" // Gets added to the search filter - not displayed for user
+    },
+    {
+        name: "Pepper Lunch",
+        category: "Food",
+        categoryId: "Food", // Please only use "Food", "Visit", or "Stay". For use with the filter tabs
+        image: "./images/pepperlunch.jpeg",
+        rating: 4.8, // Will only be displayed to the nearest 0.5 stars
+        description: "Open every day from 9am to 10pm.",
+        locationtxt: "BKK1 st 51", // Name of location, put link in "location: "
+        location: "https://www.google.com/maps/place/Pepper+Lunch+BKK1/@11.5523709,104.9243147,17z/data=!3m1!4b1!4m6!3m5!1s0x3109514e674f9ea5:0xde95f1662db19292!8m2!3d11.5523658!4d104.9268163!16s%2Fg%2F11wxhcnsd_?entry=ttu&g_ep=EgoyMDI2MDkxMy4wIKXMDSoASAFQAw%3D%3D",
+        area: "BKK1", // Broad area tag that is shown on the card
+        price: "5-10$ per person",
+        reviews: ["probably won't have time to use these..."], // Probably don't fill this out
+        tags: "bkk1" // Gets added to the search filter - not displayed for user
+    },
+    {
         name: "Mealea",
         category: "Foods",
         categoryId: "Food", // Please only use "Food", "Visit", or "Stay". For use with the filter tabs
