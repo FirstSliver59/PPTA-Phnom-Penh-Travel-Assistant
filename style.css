@@ -496,5 +496,6 @@ ul {
 }
 
 .aba{
-  object-fit:none;
+  height:50%;
+  object-fit: scale-down;
 }
