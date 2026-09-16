@@ -14,9 +14,34 @@ function main() {
 
 // Slideshow
 
+const slideshowContainer = document.querySelector(".slideshow-container")
+let chosen = [] // To make sure we don't use the same location twice
+for(let i = 0; i < 4; i++){
+    let random = Math.round(Math.random()*LOCATIONS.length)
+    if(!chosen.includes(random)){
+        chosen.push(random)
+        slideshowContainer.innerHTML += `
+        <div class="homeSlide">
+            <h2 class="slide-location">${LOCATIONS[random].name}</h2>
+            <img src="${LOCATIONS[random].image}" alt="">
+        </div>
+        `
+    }else{
+        i -= 1
+    }
+}
+slideshowContainer.innerHTML += `
+    <div class="dots-wrapper">
+    <div class="dot dot-active"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    </div>
+`
+const homeSlides = document.querySelectorAll(".homeSlide")
+
 const dots = document.querySelectorAll(".dot")
 
-const homeSlides = document.querySelectorAll(".homeSlide")
 let index = 0
 
 let interval
