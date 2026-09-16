@@ -174,8 +174,8 @@ function createModal(id){
         <div class="modal-body">
           <div class="tabbar">
             <button class="btn modaltabbtn tabbtn btn-active" data-tabid="Description">Description</button>
-            <button class="btn modaltabbtn tabbtn" data-tabid="Location">Location</button>
             <button class="btn modaltabbtn tabbtn" data-tabid="Price">Price</button>
+            <button class="btn modaltabbtn tabbtn" data-tabid="Location">Location</button>
           </div>
 
           <div class="tabbar-body">
